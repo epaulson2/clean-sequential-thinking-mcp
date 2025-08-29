@@ -1,0 +1,1 @@
+# clean-sequential-thinking-mcp
