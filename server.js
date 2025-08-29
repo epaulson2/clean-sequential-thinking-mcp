@@ -101,7 +101,7 @@ function generateSafetyAssessment(thought, user_message) {
   const hasCrisisIndicators = crisisKeywords.some(keyword => messageText.includes(keyword));
   
   let assessment = "STEP 1: SAFETY ASSESSMENT\n";
-  assessment += "=" * 40 + "\n\n";
+  assessment += "========================================\n\n";
   
   assessment += "Crisis Screening:\n";
   if (hasCrisisIndicators) {
@@ -144,7 +144,7 @@ function generateSafetyAssessment(thought, user_message) {
 // Step 2: Framework Selection
 function generateFrameworkSelection(thought, context) {
   let selection = "STEP 2: THERAPEUTIC FRAMEWORK SELECTION\n";
-  selection += "=" * 40 + "\n\n";
+  selection += "========================================\n\n";
   
   selection += "Available Evidence-Based Frameworks:\n\n";
   
@@ -184,7 +184,7 @@ function generateFrameworkSelection(thought, context) {
 // Step 3: Response Planning
 function generateResponsePlanning(thought, context) {
   let planning = "STEP 3: PERSONALIZED RESPONSE PLANNING\n";
-  planning += "=" * 40 + "\n\n";
+  planning += "========================================\n\n";
   
   planning += "Response Strategy:\n\n";
   
@@ -230,10 +230,10 @@ function generateResponsePlanning(thought, context) {
 // General analysis for additional steps
 function generateGeneralAnalysis(thought, thought_number) {
   return `STEP ${thought_number}: ADDITIONAL ANALYSIS\n` +
-         "=" * 40 + "\n\n" +
+         "========================================\n\n" +
          `Continuing analysis: ${thought}\n\n` +
          "This step provides additional depth to the grief coaching analysis,\n" +
-         "ensuring comprehensive understanding and appropriate response.`;
+         "ensuring comprehensive understanding and appropriate response.";
 }
 
 // Get step description
